@@ -1,1 +1,1 @@
-# itamae-vargrant
+# itamae-vagrant
