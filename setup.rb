@@ -10,6 +10,6 @@ end
 
 # apt-getの更新
 execute 'update apt-get' do
-  user 'rooot'
-  command 'apt-get update'
+  user 'root'
+  command 'sudo apt-get update'
 end
