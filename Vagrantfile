@@ -8,7 +8,7 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |config|
 
   config.vm.provision :itamae do |itamae|
     itamae.sudo = true
-    itamae.recipes = ['./recipe.rb']
+    itamae.recipes = ['./main.rb']
   end
 
  end
