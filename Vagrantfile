@@ -9,7 +9,15 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |config|
   config.vm.provision :itamae do |itamae|
     itamae.sudo = true
     itamae.recipes = ['./setup.rb']
+  end
+
+  config.vm.provision :itamae do |itamae|
+    itamae.sudo = true
     itamae.recipes = ['./git.rb']
+  end
+
+  config.vm.provision :itamae do |itamae|
+    itamae.sudo = true
     itamae.recipes = ['./apache.rb']
   end
 end
