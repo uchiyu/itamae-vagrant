@@ -13,3 +13,10 @@ execute 'update apt-get' do
   user 'root'
   command 'sudo apt-get update -y'
 end
+
+# openssl
+execute 'apt-get install openssl' do
+  user 'root'
+  command 'sudo apt-get -y install openssl'
+end
+
