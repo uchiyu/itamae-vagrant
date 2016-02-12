@@ -17,5 +17,6 @@ include_recipe './apache.rb'
 include_recipe './dotfiles.rb'
 
 # ruby
+include_recipe './rbenv/rbenv.rb'
 include_recipe './ruby/ruby.rb'
 
