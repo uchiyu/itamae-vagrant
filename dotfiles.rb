@@ -1,7 +1,5 @@
 #dotfiles
-package 'emacs' do
-  action :install
-end
+package 'emacs'
 
 git '.dotfiles' do
   repository 'https://github.com/uchiyu/.dotfiles.git'
