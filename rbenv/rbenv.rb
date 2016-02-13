@@ -14,23 +14,20 @@ execute 'ruby build' do
   command 'git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build'
 end
 
-execute 'make .zshenv' do
-  command 'touch .zshenv'
+remote_file "/home/vagrant/.zshenv" do
+  owner "root"
+  group "root"
+  source "../.zshenv"
 end
 
 execute 'change permission .zshenv' do
   command 'chmod 777 .zshenv'
 end
 
-execute 'rbenv pass' do
-  command "echo export PATH=$HOME/.rbenv/bin:$PATH >> ~/.zshenv"
-end
-
-execute 'rbenv init' do
-  user "root"
-  command "echo eval $(rbenv init -) >> ~/.zshenv"
-end
-
 execute 'ruby setting' do
-  command 'apt-get install -y libssl-dev libreadline-dev zlib1g-dev'
+  command 'apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev'
+end
+
+execute 'sqlite install' do
+  command 'apt-get -y install sqlite3 libsqlite3-dev'
 end

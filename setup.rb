@@ -14,6 +14,12 @@ execute 'update apt-get' do
   command 'sudo apt-get update -y'
 end
 
+# apt-getの更新
+execute 'update apt-get' do
+  user 'root'
+  command 'sudo apt-get upgrade -y'
+end
+
 # openssl
 execute 'apt-get install openssl' do
   user 'root'
