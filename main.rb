@@ -19,5 +19,5 @@ include_recipe './dotfiles.rb'
 # ruby
 include_recipe './rbenv/rbenv.rb'
 include_recipe './ruby/ruby.rb'
-#include_recipe './ruby/rails.rb'
+include_recipe './ruby/rails.rb'
 

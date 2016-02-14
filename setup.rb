@@ -11,13 +11,12 @@ end
 # apt-getの更新
 execute 'update apt-get' do
   user 'root'
-  command 'sudo apt-get update -y'
+  command 'sudo apt-get -y update'
 end
 
-# apt-getの更新
 execute 'update apt-get' do
   user 'root'
-  command 'sudo apt-get upgrade -y'
+  command 'sudo apt-get -y upgrade'
 end
 
 # openssl
