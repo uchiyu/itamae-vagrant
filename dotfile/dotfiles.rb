@@ -10,7 +10,7 @@ execute 'set dotfiles' do
 end
 
 execute 'change permisson' do
-  command 'sudo chmod 644 .zshrc'
+  command 'sudo chmod 777 .zshrc'
 end
 
 

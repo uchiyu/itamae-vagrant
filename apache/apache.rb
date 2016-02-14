@@ -8,5 +8,5 @@ end
 remote_file "/var/www/html/index.html" do
   owner "root"
   group "root"
-  source "index.html"
+  source "../index.html"
 end

@@ -1,23 +1,23 @@
 # set up
-include_recipe './setup.rb'
+include_recipe './setup/setup.rb'
 
 # git
-include_recipe './git.rb'
+include_recipe './git/git.rb'
 
 # zsh
-include_recipe './zsh.rb'
+include_recipe './zsh/zsh.rb'
 
 # tmux
-include_recipe './tmux.rb'
+include_recipe './tmux/tmux.rb'
 
 # apache
-include_recipe './apache.rb'
+include_recipe './apache/apache.rb'
 
 # dotfile
-include_recipe './dotfiles.rb'
+include_recipe './dotfile/dotfiles.rb'
 
 # ruby
-include_recipe './rbenv/rbenv.rb'
+include_recipe './ruby/rbenv.rb'
 include_recipe './ruby/ruby.rb'
 include_recipe './ruby/rails.rb'
 
