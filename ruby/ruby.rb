@@ -17,3 +17,9 @@ end
 execute 'bundler install' do
   command 'gem install bundler'
 end
+
+execute 'rubocop install' do
+  command 'gem install rubocop'
+end
+
+

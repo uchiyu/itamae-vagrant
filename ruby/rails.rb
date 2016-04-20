@@ -17,7 +17,7 @@ execute 'change permission .rbenv' do
 end
 
 directory '/home/vagrant/rails_project' do
-  mode '777'
+  mode '755'
   owner 'root'
   group 'root'
 end
