@@ -2,6 +2,8 @@
 VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure VAGRANTFILE_API_VERSION do |config|
+  Encoding.default_external = 'UTF-8'
+
   config.vm.box = 'ubuntu/trusty64'
   config.vm.hostname = 'uchiyu'
   config.vm.network :public_network, ip: '192.168.11.48'
