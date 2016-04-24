@@ -15,11 +15,11 @@ execute 'set ruby version' do
 end
 
 execute 'bundler install' do
-  command 'gem install bundler'
+  command 'sudo ~/.rbenv/shims/gem install bundler'
 end
 
 execute 'rubocop install' do
-  command 'gem install rubocop'
+  command 'sudo ~/.rbenv/shims/gem install rubocop'
 end
 
 

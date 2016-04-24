@@ -2,15 +2,21 @@
 package 'emacs'
 
 git '.dotfiles' do
+  user "vagrant"
   repository 'https://github.com/uchiyu/.dotfiles.git'
 end
 
 execute 'set dotfiles' do
-  command 'sh .dotfiles/install.sh'
+  user "vagrant"
+  command 'sudo sh /home/vagrant/.dotfiles/install.sh'
 end
 
 execute 'change permisson' do
-  command 'sudo chmod 777 .zshrc'
+  command 'sudo chmod -R 777 .vim'
 end
+
+#execute 'change permisson' do
+#  command 'sudo chmod 777 .zshrc'
+#end
 
 
