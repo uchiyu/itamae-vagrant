@@ -22,3 +22,5 @@ include_recipe './ruby/ruby.rb'
 include_recipe './ruby/sinatra.rb'
 include_recipe './ruby/rails.rb'
 
+# NLP
+include_recipe './NLP/mecab.rb'

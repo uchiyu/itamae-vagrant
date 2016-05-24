@@ -1,17 +1,22 @@
-git 'rbenv' do
+git '.rbenv' do
+    destination '/home/vagrant/.rbenv'
     repository 'https://github.com/rbenv/rbenv.git'
+    not_if 'test -d .rbenv'
 end
 
-execute 'change permission rbenv' do
-  command 'chmod 777 -R rbenv'
+directory 'plugins' do
+    not_if 'test -d /home/vagrant/.rbenv/plugins'
 end
 
-execute 'change name' do
-  command 'mv rbenv .rbenv'
+git 'ruby-build' do
+    destination '/home/vagrant/.rbenv/plugins/ruby-build'
+    repository 'https://github.com/sstephenson/ruby-build.git'
+    not_if 'test -d /home/vagrant/.rbenv/plugins/ruby-build'
 end
 
-execute 'ruby build' do
-  command 'git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build'
+execute 'change position' do
+  command 'mv ruby-build /home/vagrant/.rbenv/plugins/ruby-build'
+  not_if 'test -d /home/vagrant/.rbenv/plugins/ruby-build'
 end
 
 remote_file "/home/vagrant/.zshenv" do

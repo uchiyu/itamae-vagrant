@@ -2,6 +2,7 @@
 execute 'ruby install' do
   # rbenvのコマンドはフルパスで
   command '~/.rbenv/bin/rbenv install 2.2.4'
+  not_if '/home/vagrant/.rbenv/bin/rbenv versions | grep 2.2.4'
 end
 
 execute 'rbenv rehash' do

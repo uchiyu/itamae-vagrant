@@ -4,6 +4,7 @@ package 'emacs'
 git '.dotfiles' do
   user "vagrant"
   repository 'https://github.com/uchiyu/.dotfiles.git'
+  not_if 'test -d .dotfiles'
 end
 
 execute 'set dotfiles' do
