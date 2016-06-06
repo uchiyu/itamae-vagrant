@@ -9,10 +9,11 @@ Vagrant.configure VAGRANTFILE_API_VERSION do |config|
   config.vm.network :public_network, ip: '192.168.11.48'
   config.vm.network :forwarded_port, guest: 80, host: 8888
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
+  config.vm.network :forwarded_port, guest: 4567, host: 4567
 
   config.vm.provision :itamae do |itamae|
     itamae.sudo = true
     itamae.recipes = ['./main.rb']
   end
-
  end
